@@ -14,6 +14,10 @@ body {
     background-size: 60% 90%;
     background-repeat: no-repeat;
     background-position: right;
+
+    @media screen and (max-width: 768px) {
+        background-image: none
+    }
 }
 
 nav {
@@ -83,4 +87,76 @@ nav {
     margin-top: 10px;
     font-size: 16px;
     width: 55ch;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 {
+    flex-basis: 35%;
+    background: grey;
+    border-radius: 15px;
+    height: fit-content;
+}
+
+.about-col-1 img {
+    width: 100%;
+}
+.about-col-2 {
+    flex-basis: 60%;
+}
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.tab-links {
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: red;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul {
+    padding: 0;
+}
+
+.tab-contents ul li {
+    display: flex;
+    align-items: center;
+    flex-basis: initial;
+    justify-content: space-between;
+    font-size: 14px;
+    list-style: none;
+}
+.tab-contents ul li span {
+    color: red;
+    font-size: 16px;
+}
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
 }
