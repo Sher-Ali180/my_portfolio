@@ -171,7 +171,7 @@ nav {
     font-weight: bold;
     font-size: 12px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     width: fit-content;
     border-radius: 20px;
     padding: 10px;
@@ -201,28 +201,25 @@ nav {
     font-size: 20px;
     font-weight: bold;
     color: red;
-    margin-bottom: -5px;
+    margin-bottom: -10px;
 }
 .skill-list ul li {
     font-size: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 .skill-list ul li p {
     font-size: 14px;
     font-style: italic;
+    font-weight: bold;
     color: rgb(255, 115, 0);
 }
 .soft-skills{
-    display: grid;
-    grid-template-columns: 33% 33% 33%
-}
-.soft-skill {
-    background: red;
-    width: fit-content;
-    padding: 8px;
-    border-radius: 5px;
     font-size: 14px;
-    font-weight: 500;
+    grid-template-columns: 33% 33%
+}
+.soft-skills li{
+    list-style-type: disc;
+    margin-left: 20px;
 }
 .technical-skills {
     display: grid;
@@ -232,4 +229,43 @@ nav {
 .technical-skills-list li {
     list-style-type: disc;
     margin-left: 20px;
+}
+
+.course-name {
+    font-size: 20px;
+    color:red;
+    margin-bottom: -10px;
+}
+.institute-name {
+    color: rgb(255, 115, 0);
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.learn {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: red;
+}
+.learn-list {
+    font-size: 12px;
+    margin-left: 20px;
+}
+.learn-list li {
+    margin-bottom: 2px;
+    list-style-type: disc;
+}
+.heading-with-date {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.tenure {
+    font-size: 14px;
 }
