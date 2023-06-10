@@ -1,6 +1,8 @@
 body {
     background-color: black;
     color: white;
+    font-family: Arial, Helvetica, sans-serif
+
 }
 
 body ul li {
@@ -9,7 +11,6 @@ body ul li {
 
 .container{
     padding: 16px 40px;
-    font-family: Arial, Helvetica, sans-serif
 }
 
 .header {
@@ -34,9 +35,6 @@ nav {
 
 .header-left {
     font-size: 32px;
-    border: 2px solid white;
-    border-radius: 30%;
-    padding: 10px;
     cursor: pointer;
     text-decoration: none;
     color: white;
@@ -268,3 +266,34 @@ nav {
 .tenure {
     font-size: 14px;
 }
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 50px;
+    gap: 20px;
+}
+.service h3{
+    font-weight: normal;
+    font-size: 16px;
+}
+.service {
+    padding: 40px;
+    background-color: rgb(88, 88, 88);
+    transition: background-color 0.5s, transform 0.5s;
+    border-radius: 10px;
+}
+
+.service:hover {
+    background-color: rgb(255, 115, 0);
+    transform: translateY(-10px);
+}
+.service-icon {
+    font-size: 30px;
+}
+details[open] summary ~ * {
+    animation: fade .5s ease-in-out;
+  }
+  @keyframes fade {
+    0%    {opacity: 0}
+    100%  {opacity: 1}
+  }
