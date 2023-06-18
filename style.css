@@ -11,6 +11,7 @@ body ul li {
 
 .container{
     padding: 16px 40px;
+    margin-bottom: 20px;
 }
 
 .header {
@@ -113,6 +114,7 @@ nav {
     font-size: 60px;
     font-weight: 600;
     color: white;
+    margin-top: 0;
 }
 .tabs {
     display: flex;
@@ -249,10 +251,11 @@ nav {
     padding: 10px;
     cursor: pointer;
     background-color: red;
+    align-self: center;
 }
 .learn-list {
     font-size: 12px;
-    margin-left: 20px;
+    box-sizing: border-box;
 }
 .learn-list li {
     margin-bottom: 2px;
@@ -290,17 +293,33 @@ nav {
 .service-icon {
     font-size: 30px;
 }
-.project h3{
-    font-weight: normal;
-    font-size: 16px;
+
+.work-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto;
+    margin-top: 50px;
+    text-align: center;
 }
 .project {
     display: flex;
-    padding: 40px;
+    flex-direction: column;
     border-radius: 10px;
     gap: 20px;
 }
 
+.project-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project h2{
+    margin: 0;
+}
+.project h3{
+    font-weight: normal;
+    font-size: 16px;
+}
 .project-img {
     border-radius: 10px;
     width: 500px;
@@ -314,14 +333,15 @@ details[open] summary ~ * {
     0%    {opacity: 0}
     100%  {opacity: 1}
   }
+
 .contact-grid {
     display: grid;
     grid-template-columns: auto auto;
-    align-items: center;
 }
 
 .contact-left h1 {
     font-size: 60px;
+    margin-top: 0;
 }
 
 .contact-left h3 {
@@ -329,10 +349,7 @@ details[open] summary ~ * {
     font-weight: 400;
 }
 
-.fa-envelope {
-    color: red
-}
-.fa-phone {
+.contact-icons {
     color: red
 }
 
@@ -348,4 +365,40 @@ details[open] summary ~ * {
     align-items: center;
     font-size: 20px;
     color: red;
+}
+
+.form-control {
+    background-color: rgb(85, 85, 85);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:rgb(207, 207, 207) ;
+    opacity: 1;
+}
+.sender-info {
+    height: 40px;
+}
+
+.sender-message {
+    min-height: 100px;
+}
+
+.btn {
+    max-width: fit-content;
+    background-color: red;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.btn-download-cv {
+    margin-top: 20px;
+
 }
