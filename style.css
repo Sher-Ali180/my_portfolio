@@ -2,7 +2,6 @@ body {
     background-color: black;
     color: white;
     font-family: Arial, Helvetica, sans-serif
-
 }
 
 body ul li {
@@ -16,17 +15,25 @@ body ul li {
 
 .header {
     width: 100%;
-    height: 100vh;
-    background-image: url(assets/images/my-pic.png);
-    background-size: 60% 90%;
-    background-repeat: no-repeat;
-    background-position: right;
-
-    @media screen and (max-width: 768px) {
-        background-image: none
+}
+.header-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    @media screen and (max-width: 640px) {
+        grid-template-columns: auto;
     }
 }
 
+.bg-img {
+    width: 80%;
+    height: 80%;
+
+
+    @media screen and (max-width: 640px) {
+        display: none
+    }
+}
 nav {
     display: flex;
     align-items: center;
@@ -39,6 +46,12 @@ nav {
     cursor: pointer;
     text-decoration: none;
     color: white;
+}
+
+.header-right {
+    @media screen and (max-width: 640px) {
+        display: none;
+    }
 }
 
 .header-right ul {
@@ -90,12 +103,20 @@ nav {
     margin-top: 10px;
     font-size: 16px;
     width: 55ch;
+
+    @media  screen and (max-width: 640px) {
+        width: 100%;
+    }
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media  screen and (max-width: 640px){
+        display: block;
+    }
 }
 .about-col-1 {
     flex-basis: 35%;
@@ -114,7 +135,7 @@ nav {
     font-size: 60px;
     font-weight: 600;
     color: white;
-    margin-top: 0;
+    margin-top: 40px;
 }
 .tabs {
     display: flex;
@@ -284,6 +305,10 @@ nav {
     background-color: rgb(88, 88, 88);
     transition: background-color 0.5s, transform 0.5s;
     border-radius: 10px;
+
+    @media screen and (max-width: 640px) {
+        padding: 20px;
+    }
 }
 
 .service:hover {
@@ -296,10 +321,15 @@ nav {
 
 .work-container {
     display: grid;
-    gap: 10px;
+    gap: 20px;
     grid-template-columns: auto auto;
-    margin-top: 50px;
+    margin-top: 40px;
     text-align: center;
+    align-items: center;
+
+    @media screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+    }
 }
 .project {
     display: flex;
@@ -313,6 +343,11 @@ nav {
     flex-direction: column;
     align-items: center;
 }
+
+.project-info h2 {
+    color: rgb(255, 115, 0);
+}
+
 .project h2{
     margin: 0;
 }
@@ -322,8 +357,7 @@ nav {
 }
 .project-img {
     border-radius: 10px;
-    width: 500px;
-    height: 300px;
+    width: 100%;
 }
 
 details[open] summary ~ * {
@@ -334,9 +368,17 @@ details[open] summary ~ * {
     100%  {opacity: 1}
   }
 
+.contact {
+    margin-top: 40px;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: auto auto;
+
+    @media screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .contact-left h1 {
@@ -400,5 +442,5 @@ details[open] summary ~ * {
 
 .btn-download-cv {
     margin-top: 20px;
-
+    margin-bottom: 20px;
 }
