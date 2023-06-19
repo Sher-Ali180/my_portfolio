@@ -123,10 +123,18 @@ nav {
     font-size: 30px;
     margin: 0;
     font-style: italic;
+
+    @media screen and (max-width: 640px) {
+        font-size: 15px;
+    }
 }
 .intro {
     margin: 0;
     font-size: 60px;
+
+    @media screen and (max-width: 640px) {
+        font-size: 40px;
+    }
 }
 .intro span {
     color: red;
@@ -274,8 +282,9 @@ nav {
 }
 .technical-skills {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 0;
+    gap: 10px
 }
 .technical-skills-list li {
     list-style-type: disc;
@@ -317,6 +326,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 100px;
 }
 .tenure {
     font-size: 14px;
