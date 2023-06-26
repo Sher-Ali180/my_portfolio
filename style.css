@@ -20,14 +20,6 @@ body ul li {
 .header {
     width: 100%;
 }
-.header-grid {
-    display: grid;
-    grid-template-columns: auto minmax(300px, 650px);
-    align-items: center;
-    @media screen and (max-width: 640px) {
-        grid-template-columns: auto;
-    }
-}
 
 .bg-img {
     max-width: 100%;
@@ -111,23 +103,15 @@ nav {
     color: red;
 }
 .header-text {
-    margin-top: 20%;
+    margin-top: 5%;
     font-size: 30px;
+    text-align: center;
 
-    @media screen and (max-width: 640px) {
-        margin-top: 10%;
+    @media  screen and (max-width: 640px) {
+        text-align: left;
     }
 }
-.profession {
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    margin: 0;
-    font-style: italic;
 
-    @media screen and (max-width: 640px) {
-        font-size: 15px;
-    }
-}
 .intro {
     margin: 0;
     font-size: 60px;
@@ -169,9 +153,6 @@ nav {
     width: 100%;
     border-radius: 20px;
 }
-.about-col-1 img:hover {
-
-}
 
 .about-col-2 {
     flex-basis: 60%;
@@ -182,6 +163,12 @@ nav {
     color: white;
     margin-top: 40px;
 }
+
+
+.about-desc {
+ margin-top: -20px;   
+}
+
 .tabs {
     display: flex;
     align-items: center;
@@ -373,7 +360,7 @@ nav {
     grid-template-columns: auto auto;
     margin-top: 40px;
     text-align: center;
-    align-items: center;
+    align-items: baseline;
 
     @media screen and (max-width: 640px) {
         grid-template-columns: 1fr;
