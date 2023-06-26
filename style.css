@@ -141,7 +141,7 @@ nav {
 }
 .summary {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 20px;
 
     @media  screen and (max-width: 640px) {
         width: 100%;
@@ -162,11 +162,17 @@ nav {
     background: grey;
     border-radius: 15px;
     height: fit-content;
+    margin-top: 50px;
 }
 
 .about-col-1 img {
     width: 100%;
+    border-radius: 20px;
 }
+.about-col-1 img:hover {
+
+}
+
 .about-col-2 {
     flex-basis: 60%;
 }
@@ -235,7 +241,7 @@ nav {
     border-radius: 20px;
     padding: 10px;
     cursor: pointer;
-    background-color: red;
+    background-color: red
 }
 .tasks-dropdown ul li {
     font-weight: bold;
@@ -320,6 +326,7 @@ nav {
 }
 .learn-list li {
     margin-bottom: 2px;
+    margin-left: 15px;
     list-style-type: disc;
 }
 .heading-with-date {
